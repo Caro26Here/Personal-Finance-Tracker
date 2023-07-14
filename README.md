@@ -1,2 +1,3 @@
 # Personal-Finance-Tracker
-Personal finance tracker. This could be a Python script that helps you track your income, expenses, and net worth. With a database to store each customer's financial data, and using object-oriented programming to create the script.
+Helps you track your income, expenses, net worth, and your progress towards a financial goal. 
+With a database to store each customer's financial data, and using object-oriented programming to create the script.
