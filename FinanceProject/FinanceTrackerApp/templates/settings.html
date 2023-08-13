@@ -1,0 +1,23 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<section>
+    <article id="bio">
+        <h1 class="heading_shadow">H Financial</h1>
+        <h2>Welcome to the Finance Tracker's Main Page</h2>
+        <p>
+            {{about}}
+        </p>
+    </article>
+</section>
+<section>
+    <article>
+        <h2>Login</h2>
+        <img src="{% static 'img/movie_logo' %}">
+    </article>
+    <article>
+        <h2>Sign Up</h2>
+        <img src="{% static 'img/fin_logo' %}">
+    </article>
+</section>
+{% endblock %}

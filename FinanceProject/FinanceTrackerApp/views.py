@@ -3,4 +3,10 @@ from django.http import HttpResponse
 
 # Create your views here.
 def home(request):
-    return HttpResponse("Welcome to the Finance Tracker's Main Page")
+    return render(request, "index.html")
+
+def goal(request):
+    return render(request, "goal.html")
+
+def settings(request):
+    return render(request, "settings.html")

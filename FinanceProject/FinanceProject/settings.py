@@ -31,7 +31,7 @@ ALLOWED_HOSTS = []
 # Application definition
 
 INSTALLED_APPS = [
-    'FinanceTrackerApp',
+    'FinanceTrackerApp.apps.FinancetrackerappConfig',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
@@ -55,7 +55,7 @@ ROOT_URLCONF = 'FinanceProject.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [],
+        'DIRS': ['FinanceTrackerApp/templates'],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [

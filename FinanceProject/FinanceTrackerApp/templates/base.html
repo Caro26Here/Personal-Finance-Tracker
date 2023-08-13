@@ -1,0 +1,44 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>H Financial</title>
+    <meta name="description" content="The simplest way to manage your personal finances." />
+    <meta
+      name="CH"
+      content="Colombia based."
+    />
+
+    <!-- Include your CSS files here -->
+    <link
+      rel="preload"
+      as="style"
+      href="{% static 'css/style.css' %}"
+      onload="this.rel = 'stylesheet'"
+    />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Karla&family=Markazi+Text:wght@500&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+
+  <body style="background-color: #50398f;">
+    <!--Header content-->
+    {% include 'partials/_header.html' %}
+
+    <main>
+      {% block content %}
+      {% endblock %}
+    </main>
+
+    <!--Footer content-->
+    {% include 'partials/_footer.html' %}
+  </body>
+</html>
