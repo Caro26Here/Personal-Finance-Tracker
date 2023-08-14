@@ -16,7 +16,8 @@ def signout(request):
     pass
 
 def goal(request):
-    return render(request, "goal.html")
+    goal = { 'goal': "Buy a house"}
+    return render(request, "goal.html", goal)
 
 def settings(request):
     return render(request, "settings.html")
