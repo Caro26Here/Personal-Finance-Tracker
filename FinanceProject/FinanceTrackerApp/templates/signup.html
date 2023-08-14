@@ -5,22 +5,19 @@
     <article id="bio">
         <h1 class="heading_shadow">H Financial</h1>
         <h2>Welcome to the Finance Tracker's Main Page</h2>
+        <p>
+            {{about}}
+        </p>
     </article>
 </section>
 <section>
     <article>
         <h2>Login</h2>
-        <button type="submit">SingIn</button>
-        <button type="submit">SingOut</button>
-        <button type="submit">SingUp</button>
+        <img src="{% static 'img/movie_logo' %}">
     </article>
-</section>
-<section>
     <article>
-        <h2>About H Financial</h2>
-        <p>
-            {{about}}
-        </p>
+        <h2>Sign Up</h2>
+        <img src="{% static 'img/fin_logo' %}">
     </article>
 </section>
 {% endblock %}
