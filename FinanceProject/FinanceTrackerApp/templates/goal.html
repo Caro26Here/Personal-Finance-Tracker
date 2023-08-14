@@ -1,22 +1,25 @@
-{% load static %}
 {% extends 'base.html' %}
 
 {% block content %}
 <section>
     <article id="bio">
-        <h1 class="heading_shadow">H Financial</h1>
         <h2>Welcome to the Finance Tracker's Main Page</h2>
-        <p>
-            {{about}}
-        </p>
     </article>
 </section>
 <section>
     <article>
         <h2>Login</h2>
+        <button type="submit">SingIn</button>
+        <button type="submit">SingOut</button>
+        <button type="submit">SingUp</button>
     </article>
+</section>
+<section>
     <article>
-        <h2>Sign Up</h2>
+        <h2>About Us</h2>
+        <p>
+            {{about}}
+        </p>
     </article>
 </section>
 {% endblock %}
