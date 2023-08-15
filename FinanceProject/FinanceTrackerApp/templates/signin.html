@@ -8,8 +8,19 @@
 </section>
 <section>
     <article>
-        <p>username: </p>
-        <p>password: </p>
+
+        <form action="/signup" method="post">
+            {% csrf_token %}
+            <label for="">Username</label>
+            <input type="text" id="username" name="username" placeholder="Create a username (only letters and numbers)" Required>
+
+            <br>
+            <label for="">Password</label>
+            <input type="password" id="password" name="password" placeholder="Create a Password" Required>
+            
+            <br>
+            <button type="submit">Sign In</button>
+        </form>
     </article>
 </section>
 {% endblock %}

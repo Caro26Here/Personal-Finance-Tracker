@@ -3,23 +3,19 @@
 {% block content %}
 <section>
     <article>
-        <h2>Welcome to the Finance Tracker's Main Page</h2>
+        {% if user.is_autehnticated %}
+            <h2>Welcome {{ fname }}</h2>
+        {% endif %}
     </article>
 </section>
 <section>
     <article>
-        <h2>Login</h2>
-        <button type="submit"><a href="/signup">SingUp</a></button>
-        <button type="submit"><a href="/signin">SingIn</a></button>
-        <button type="submit"><a href="/signout">SingOut</a></button>
+        <h2>Current Balance:</h2>
     </article>
 </section>
 <section>
     <article>
-        <h2>About Us</h2>
-        <p>
-            {{about}}
-        </p>
+        <button type="submit"><a href="/goal">Goal</a></button>
     </article>
 </section>
 {% endblock %}

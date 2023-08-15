@@ -1,0 +1,25 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<section>
+    <article>
+        <h2>Welcome to the Finance Tracker's Main Page</h2>
+    </article>
+</section>
+<section>
+    <article>
+        <h2>Login</h2>
+        <button type="submit"><a href="/signup">SingUp</a></button>
+        <button type="submit"><a href="/signin">SingIn</a></button>
+        <button type="submit"><a href="/signout">SingOut</a></button>
+    </article>
+</section>
+<section>
+    <article>
+        <h2>About Us</h2>
+        <p>
+            {{about}}
+        </p>
+    </article>
+</section>
+{% endblock %}
