@@ -1,4 +1,5 @@
 body {
+    background-color: #2d3449;
     font-family: 'Karla', sans-serif;
     margin-top: 3rem;
     margin-bottom: 3rem;
@@ -20,7 +21,7 @@ h1 {
 
 h2 {
     font-size: 2.5rem;
-    color: #2d3449;
+    color: #6a7aa4;
     margin:1rem 0;
 }
 
@@ -44,7 +45,6 @@ header img {
     max-width: 100%;
     height: auto;
 }
-
 
 nav {
     background-color: #404b69;
@@ -71,13 +71,9 @@ nav ul a {
     text-decoration: none;
 }
 
-nav ul a:active {
-    text-decoration: underline;
-}
-
 nav ul a:hover {
-    text-decoration: underline;
     text-decoration-thickness: 0.1rem;
+    text-shadow: 1px 1px 4px  #6a7aa4;
 }
 
 section {
@@ -101,81 +97,12 @@ article ul {
 }
 
 main article {
-    border: 1px solid #e6e6e6;
+    border: 1px solid #2d3449;
     padding-left: 1rem;
     padding-right: 1rem;
 }
 
-figure {
-    margin: 0;
-}
-
-label {
-    font-weight: bold;
-    display: block;
-  }
-
-input{
-    width: 80%;
-    display: block;
-    padding: .5rem 1rem;
-    line-height: 1.5rem;
-    box-sizing: border-box;
-}
-
-#button {
-    padding: .5rem 1rem;
-    border: 1px solid  #2d3449;
-    background-color: #404b69;;
-    border-radius: 5px;
-    width: 80%;
-    font-size: 1.25rem;
-    display: block;
-    color: #ffffff;
-    line-height: 25px;
-  }
-
-#hero {
-    background-image: linear-gradient(0deg, rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.8)), url('../img/restaurant_inside.jpg');
-    background-size: cover;
-    background-position: 75%;
-    color: #ffffff;
-    min-height: 200px;
-    text-align: center;;
-}
-
-#hero p {
-    font-size: 2rem;
-    margin:0;
-    text-shadow: 2px 2px 4px  #6a7aa4;
-}
-
-.cta { 
-    display: inline-block; 
-    color: #ffffff;
-    width: 200px; 
-    font-weight: bold; 
-    font-size: 1.5rem;
-    padding: 8px; 
-    border: 3px solid #ffffff; 
-    text-align: center; 
-    outline: none; 
-    text-decoration: none; 
-    margin: 1rem;
-} 
-
-.cta:hover {
-    color:#ffffff;
-    background: #6a7aa4;
-    border: 3px solid  #536289; 
-  }
-
-  .heading-shadow {
-    text-shadow: 1px 1px 4px  #6a7aa4;
-  }
-
 footer {
-
     padding: 1rem;
     display: flex;
     gap: 2rem 1rem;
@@ -186,7 +113,7 @@ footer img {
 }
 
 footer p {
-    border-top:  #2d3449;
+    border-top:  #6a7aa4;
     border-style: solid;
     border-width: 0.1rem;
     border-bottom: none;
@@ -195,61 +122,3 @@ footer p {
     text-align: right;
     padding-top: 1rem;;
 }
-
-.row {
-    display: flex;
-    flex-direction: row;
-    width: 100%;
-    padding-bottom: 1rem;
-  }
-
-  .column {
-    flex-basis: 50%;
-    margin-bottom: 1rem;
-    padding-bottom: 1rem;
-  }
-
-  .column figure {
-    padding: 0px 12px;
-
-  }
-
-
-  .videowrap {
-	position: relative;
-	padding-bottom: 56.25%; /* 16:9 */
-	padding-top: 1rem;
-	height: 0;
-}
-.videowrap iframe {
-	position: absolute;
-    margin-top: 2rem;
-	top: 0;
-	left: 0;
-	width: 100%;
-	height: 100%;
-}
-
-.menu-price{
-    display: block;
-    font-size: 1rem;
-}
-
-@media (max-width: 800px) {
-    section {
-        flex-direction: column;   
-    }
-
-    .row {
-        flex-direction: column;
-        width: 100%;
-      }
-   
-    input{
-        width: 100%;
-    }
-
-    #button{
-        width: 100%;
-    }
-  }
