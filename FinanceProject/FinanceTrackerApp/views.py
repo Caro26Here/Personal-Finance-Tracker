@@ -2,7 +2,7 @@ from django.shortcuts import redirect, render
 from django.http import HttpResponse
 from django.contrib.auth.models import User
 from django.contrib import messages
-from django.contrib.auth import authenticate, login
+from django.contrib.auth import authenticate, login, logout
 
 # Create your views here.
 def home(request):
@@ -34,7 +34,7 @@ def signup(request):
             messages.error(request, "passwords entered are not the same!")
             return redirect('home')        
     
-    return render(request, "authentication/signup.html")
+    return render(request, "signup.html")
 
 def signin(request):
 
@@ -49,7 +49,7 @@ def signin(request):
             login(request, user)
             fname = user.first_name
 
-            return render(request, "authentication/index.html", {'fname': fname})
+            return render(request, "index.html", {'fname': fname})
         else:
             messages.error(request, "Bad credentials!")
 
@@ -62,7 +62,11 @@ def index(request, user):
     return render(request, "index.html", {'user': user})
 
 def signout(request):
-    pass
+
+    logout(request)
+    messages.success(request, "Logged out Successfully!")
+
+    return redirect('home')
 
 def goal(request):
     goal = { 'goal': "Buy a house"}
