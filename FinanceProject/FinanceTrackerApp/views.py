@@ -21,41 +21,45 @@ def signup(request):
         password = request.POST.get('password')
         pass2 = request.POST.get('pass2')
 
-        user = User.objects.create_user(username, email, password)
-        user.first_name = firstname
-        user.last_name = lastname
+        if password == pass2:
+            user = User.objects.create_user(username, email, password)
+            user.first_name = firstname
+            user.last_name = lastname
 
-        user.save()
-        messages.success(request, "Your account has been successfully created.")
+            user.save()
+            messages.success(request, "Your account has been successfully created.")
 
-        return redirect('signin')
+            return redirect('signin')
+        else:
+            messages.error(request, "passwords entered are not the same!")
+            return redirect('home')        
     
-    return render(request, "signup.html")
+    return render(request, "authentication/signup.html")
 
 def signin(request):
 
     if request.method == "POST":
 
-        username = request.POST('username')
-        password = request.POST('password')
+        username = request.POST.get('username')
+        password = request.POST.get('password')
 
         user = authenticate(username=username, password=password)
 
         if user is not None:
             login(request, user)
             fname = user.first_name
-            return redirect(request,'index', {'fname': fname})
+
+            return render(request, "authentication/index.html", {'fname': fname})
         else:
             messages.error(request, "Bad credentials!")
+
             return redirect('home')
 
-    
     return render(request, "signin.html")
 
-def index(request):
-    userName = User.first_name
+def index(request, user):
    
-    return render(request, "index.html", userName)
+    return render(request, "index.html", {'user': user})
 
 def signout(request):
     pass

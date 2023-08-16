@@ -9,14 +9,14 @@
 <section>
     <article>
 
-        <form action="/signup" method="post">
+        <form action="/signin" method="post">
             {% csrf_token %}
             <label for="">Username</label>
-            <input type="text" id="username" name="username" placeholder="Create a username (only letters and numbers)" Required>
+            <input type="text" id="username" name="username" placeholder="Enter your username" Required>
 
             <br>
             <label for="">Password</label>
-            <input type="password" id="password" name="password" placeholder="Create a Password" Required>
+            <input type="password" id="password" name="password" placeholder="Enter your password" Required>
             
             <br>
             <button type="submit">Sign In</button>

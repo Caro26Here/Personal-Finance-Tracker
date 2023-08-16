@@ -1,21 +1,42 @@
 {% extends 'base.html' %}
 
 {% block content %}
-<section>
-    <article>
-        {% if user.is_autehnticated %}
-            <h2>Welcome {{ fname }}</h2>
-        {% endif %}
-    </article>
-</section>
-<section>
-    <article>
-        <h2>Current Balance:</h2>
-    </article>
-</section>
-<section>
-    <article>
-        <button type="submit"><a href="/goal">Goal</a></button>
-    </article>
-</section>
+    {% for messafe in messages %}
+    <div class="alert alert-{{ message.tags }} alert-dismissible fade show" role="alert">
+        <strong>Message:</strong> {{ message }}
+        <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+            <span aria-activedescendant="true">&times;</span>
+        </button>
+    </div>
+    {% endfor %}
+    
+    {% if user.is_authenticated %}
+        <section>
+            <article>
+                    <h2>Welcome {{ fname }}</h2>
+            </article>
+        </section>
+        <section>
+            <article>
+                <h2>Current Balance: </h2>
+            </article>
+        </section>
+        <section>
+            <article>
+                <button type="submit"><a href="/goal">Goal</a></button>
+            </article>
+            <article>
+                <button type="submit"><a href="/signout">SingOut</a></button>
+            </article>
+        </section>
+    {% else %}
+        <section>
+            <article>
+                <button type="submit"><a href="/signup">SingUp</a></button>
+            </article>
+            <article>
+                <button type="submit"><a href="/signin">SingIn</a></button>
+            </article>
+        </section>            
+    {% endif %}    
 {% endblock %}
