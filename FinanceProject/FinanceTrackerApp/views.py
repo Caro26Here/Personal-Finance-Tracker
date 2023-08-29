@@ -3,6 +3,9 @@ from django.http import HttpResponse
 from django.contrib.auth.models import User
 from django.contrib import messages
 from django.contrib.auth import authenticate, login, logout
+from rest_framework.response import Response
+from rest_framework import status
+from rest_framework.decorators import api_view
 
 # Create your views here.
 def home(request):
